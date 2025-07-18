@@ -1,6 +1,8 @@
 from tradingagents.graph.trading_graph import TradingAgentsGraph
 from tradingagents.default_config import DEFAULT_CONFIG
+import os
 
+os.environ["OPENAI_API_KEY"]=""
 # Create a custom config
 config = DEFAULT_CONFIG.copy()
 config["llm_provider"] = "ollama"  # Use a different model
